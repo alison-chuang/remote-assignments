@@ -1,0 +1,117 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+  }
+
+  .main-nav, .main-header {
+	display: flex;
+  }  
+
+.main-header {
+  background-color: #F0E9E9;
+  width:100%;
+}
+
+.website-name {
+	font-size: 1em;
+    color: #4C4545;
+}
+
+.logo {
+	max-width: 2em;
+	max-height: 2em;
+	margin: auto;
+	margin-left: 10px;
+}
+
+.main-nav {
+	align-self: flex-end;
+	justify-content: center;
+	margin: auto;
+	margin-right: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+
+.website-name a, .main-nav a {
+	text-align: center;
+	display: block;
+	padding: 0px 15px;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #4C4545;
+}
+
+.row-1, .row-2{
+    width : 100%;
+    max-width : 1200px;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.container h1{
+    font-size: 2em;
+    color: #4C4545;
+	background-color: #D0EFFC;
+	width: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	margin: auto;
+	text-align: center;
+	
+}
+
+.container h2{
+    font-size: 1.5em;
+	color: #4C4545;
+}
+
+.row-1, .row-2 {
+    display: flex;
+	justify-content:center;
+	margin: auto;
+	height: 140px;
+}
+
+.box{
+	margin-right: 1em;
+	margin-left: 1em;
+	width: 70%;
+	background-color: #1C8CBB;
+	text-align: top;
+	text-align: center;
+}
+
+.button{
+	display: flex;
+	margin: auto;
+	background-color: #D0EFFC;
+	font-size: 0.5em;
+	width: 100px;
+    height: 24px;
+	padding: 2px 2px ;
+	justify-content: center;
+}
+
+.hidden, .moreBox { 
+	display: none; 
+}
