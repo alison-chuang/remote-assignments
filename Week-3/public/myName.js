@@ -7,14 +7,15 @@ function getCookie() {
     }, {});
 }
 
-//取值後插入html顯示於網頁
+//取值後插入 html 顯示於網頁，並且把 html form 刪除
 function renderName(name) {
     $('#inputName').html(
-        `How have you been, ${name}? `
+        `<h2>How have you been, ${name}?<h2> `
     );
+    $("#form").html("");
 }
 
-//若曾存過cookie直接顯示於網頁
+//檢查 cookie (若曾存過 cookie 直接顯示於網頁，且不會顯示 html form)
 function existingCookie() {
     const cookie = getCookie();
     if ('name' in cookie ) {  // checks if a property is defined on an object
@@ -22,7 +23,7 @@ function existingCookie() {
     }
 }
 
-//打myName API後
+//打 myName API 後
 existingCookie();
 
 //按按鈕後會發生的事
@@ -33,6 +34,10 @@ $('button').on('click', function () {
         url: `/trackName?name=${name}`,
         success: function(result){
             renderName(name);
-        }
+            },
+        error: function(result) {
+            alert("Error");
+            }
+        });     
     });
-});
+
