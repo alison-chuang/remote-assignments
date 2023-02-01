@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <script src="homePage.js"></script>
+    </head>
+    <body>
+        <h1>Home page</h1>
+        <h2 style="color: red"><%= errMsg %></h2>
+        <h3>New here? <br> Sign up for free to start exploring!</h3>
+        <form action="/user" method="POST">
+            <div class="container-signup">
+
+                <label for="newEmail"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="newEmail" required>
+            
+                <label for="newPsw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="newPsw" required>
+            
+                <button type="submit">sign up</button>
+            </div>
+        </form>
+
+        <br><br>
+
+        <h3>Already registered? <br> Sign in now to see what's new!</h3>
+        <form action="/signin" method="POST">
+            <div class="container-signin">
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <button type="submit">sign in</button>
+            </div>
+        </form>
+    </body>
+</html>
